@@ -21,9 +21,7 @@ Route::get('about', function () {
     return view('about');
 })->name('about');;
 
-Route::get('rooms', function () {
-    return view('rooms');
-})->name('rooms');;
+Route::get('rooms', [RoomsController::class, 'rooms'])->name('rooms');
 
 Route::get('gallery', function () {
     return view('gallery');
